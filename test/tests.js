@@ -28,7 +28,7 @@ suite('temperature', function() {
     test('45C = 113.0 Farenheit', function() {
         original.value = "45C";
         calculate();
-        assert.deepEqual(finaltable.innerHTML, "<p>\n<table class="center" id="result">\n</table>");
+        assert.deepEqual(finaltable.innerHTML, '"<p>\n<table class="center" id="result">\n</table>"');
     });
     
     
