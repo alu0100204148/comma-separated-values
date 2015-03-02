@@ -3,14 +3,12 @@ var assert = chai.assert;
 suite('temperature', function() {
     setup(function(){
       if (typeof __html__ !== 'undefined') {
-          document.body.innerHTML = __html__['test/test.html'];
+          document.body.innerHTML = __html__['test/index.html'];
           original = document.getElementById('original');
           finaltable = document.getElementById('finaltable');
       }
     });
 
-    
-    
     
     
     test('Prueba 1', function() {
