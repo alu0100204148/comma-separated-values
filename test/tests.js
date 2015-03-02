@@ -8,7 +8,7 @@ suite('temperature', function() {
 	  
           //converted = document.getElementById('converted');
 	  
-	  finaltable  = document.getElementById('finaltable');
+	  result  = document.getElementById('result');
       }
     });
 
@@ -17,7 +17,7 @@ suite('temperature', function() {
     test('32F = 0C', function() {
         original.value = '"32F","aa"';
         calculate();
-        assert.deepEqual(finaltable.innerHTML, "0.0 Celsius");
+        assert.deepEqual(result.innerHTML, "0.0 Celsius");
     });
     test('45C = 113.0 Farenheit', function() {
         original.value = "45C";
