@@ -17,13 +17,17 @@ suite('temperature', function() {
     test('32F = 0C', function() {
         original.value = '"32F","aa"';
         calculate();
-        assert.deepEqual(result.innerHTML, "0.0 Celsius");
+        assert.deepEqual(result.innerHTML, '"32F","aa"');
     });
+    
+    
     test('45C = 113.0 Farenheit', function() {
         original.value = "45C";
         calculate();
         assert.deepEqual(finaltable.innerHTML, "113.0 Farenheit");
     });
+    
+    
     test('5X = error', function() {
         original.value = "5X";
         calculate();
