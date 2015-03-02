@@ -24,13 +24,13 @@ suite('temperature', function() {
         assert.deepEqual(result.innerHTML, '"32F","aa"');
     });
     
-    
+    /*
    test('45C = 113.0 Farenheit', function() {
         original.value = "45C";
         calculate();
         assert.deepEqual(finaltable.innerHTML, "<p>\n<table class="center" id="result">\n</table>");
     });
-    
+    */
     
     test('5X = error', function() {
         original.value = "5X";
