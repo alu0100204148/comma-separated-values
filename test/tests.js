@@ -13,8 +13,10 @@ suite('temperature', function() {
     
     
     
-    test('32F = 0C', function() {
-        original.value = "32F";
+    test('Prueba 1', function() {
+        original.value = '"producto", "precio"
+			  "camisa",    "4,3"
+			  "libro de O\"Reilly", "7,2"';
         calculate();
         assert.deepEqual(finaltable.innerHTML, "0.0 Celsius");
     });
