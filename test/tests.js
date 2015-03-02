@@ -9,6 +9,10 @@ suite('temperature', function() {
           //converted = document.getElementById('converted');
 	  
 	  result  = document.getElementById('result');
+	  
+	  finaltable  = document.getElementById('finaltable');
+	  
+	  
       }
     });
 
