@@ -15,7 +15,7 @@ suite('temperature', function() {
     
     
     test('32F = 0C', function() {
-        original.value = "32F";
+        original.value = '"32F","aa"';
         calculate();
         assert.deepEqual(finaltable.innerHTML, "0.0 Celsius");
     });
