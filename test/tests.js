@@ -16,7 +16,9 @@ suite('temperature', function() {
 			  "camisa",    "4,3"
 			  "libro de O\"Reilly", "7,2"';
         calculate();
-        assert.deepEqual(finaltable.innerHTML, "0.0 Celsius");
+        assert.deepEqual(finaltable.innerHTML,	'"producto", "precio"
+						"camisa",    "4,3"
+						"libro de O\"Reilly", "7,2"');
     });
     
     
