@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Mocha</title>
+    <style>
+			div.hiddenTestElements {
+					display: none;
+			}
+		</style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mocha.css" />
@@ -9,11 +14,11 @@
   </head>
   <body>
     <div id="mocha"></div>
-    
-    <textarea autofocus cols = "80" rows = "5" id="original"></textarea>
-    <button type="button">table:</button><br>
-    <span class="output" id="finaltable"></span>
-   
+    <div class="hiddenTestElements">
+		  <textarea autofocus cols = "80" rows = "5" id="original"></textarea>
+		  <button type="button">table:</button><br>
+		  <span class="output" id="finaltable"></span>
+   	</div>
     <script src="chai.js"></script>
     <script src="mocha.js"></script>
     <script src="../csv.js"></script>
