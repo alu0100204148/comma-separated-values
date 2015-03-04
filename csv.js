@@ -47,7 +47,7 @@ function calculate() {
       var tr = error? '<tr class="error">' : '<tr>';
       r.push(tr+_.template(row, {items : result})+"</tr>");
     }
-    else {
+    else if (temp!=""){
       alert('ERROR! row '+temp+' does not look as legal CSV');
       error = true;
     }
