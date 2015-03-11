@@ -1,6 +1,6 @@
 var assert = chai.assert;
 
-suite('temperature', function() {
+suite('Comma Separated Values', function() {
 
   setup(function(){
     if (typeof __html__ !== 'undefined') {
