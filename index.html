@@ -13,13 +13,23 @@
     <div>
       <i>Write a CSV string. Click the table button. The program outputs a table with the specified data.</i>
     </div>
-    <table>
-      <tr>
-        <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
-        <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td> 
-      </tr>
-    </table>
-    <button type="button">table:</button><br>
+    <div id="wrap">
+    	<aside>
+    		<a href="test/index.html" class="myButton">SHOW TESTS</a>
+    		<br><br><br><br>
+    		<button type="button" class="myButton" id="prueba">SHOW TABLE</button><br>
+    	</aside>
+    	<section>
+    		<div class="CSSTableGenerator">
+					<table>
+						<tr>
+						  <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
+						  <td><textarea autofocus cols = "80" rows = "5" id="original" class="textarea"></textarea></td> 
+						</tr>
+					</table>
+				</div>
+			</section>
+    </div>
     <span class="output" id="finaltable"></span>
   </body>
 </html>
