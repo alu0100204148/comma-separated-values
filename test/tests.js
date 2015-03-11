@@ -35,16 +35,24 @@ suite('temperature', function() {
     if (window.localStorage) assert.deepEqual(localStorage.original, original.value);
   });
 
-  test('calculate function working', function() {
+  test('calculate function working on 1 value', function() {
     original.value = "32F";
     calculate();
     assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32F</td>              </tr>\n</tbody></table>');
   });
-  /*test('45C = 113.0 Farenheit', function() {
-    original.value = "45C";
+  
+  test('caculate function working on 3 values', function() {
+    original.value = "32, 25, DD";
     calculate();
-    assert.deepEqual(converted.innerHTML, "113.0 Farenheit");
+    assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32</td>                                  <td> 25</td>                                  <td> DD</td>              </tr>\n</tbody></table>');
   });
+  
+  test('caculate function working on values in different lines', function() {
+    original.value = "32\n25, DD";
+    calculate();
+    assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32</td>              </tr>\n<tr class="error">                    <td>25</td>                                  <td> DD</td>              </tr>\n</tbody></table>');
+  });
+  /*
   test('25e4F = 138871.1C', function() {
     original.value = "25e4F";
     calculate();
