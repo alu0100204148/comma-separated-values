@@ -6,5 +6,5 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 branches:
   only:
-  - travis
+  - Travis
   - gh-pages
