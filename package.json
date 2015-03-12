@@ -31,13 +31,13 @@
     "underscore": "^1.8.2"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS, Firefox"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alu0100204148/comma-separated-values.git"
   },
-  "author": "Alexis H. Lopez W",
+  "author": "Alexis H. Lopez W", "Marcos Luis Delgado"
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alu0100204148/comma-separated-values/issues"
