@@ -1,10 +1,10 @@
 var assert = chai.assert;
 
-suite('Comma Separated Values', function() {
+suite('csv', function() {
 
   setup(function(){
     if (typeof __html__ !== 'undefined') {
-      document.body.innerHTML = __html__['tests/index.html'];
+      document.body.innerHTML = __html__['test/test.html'];
       original = document.getElementById('original');
       converted = document.getElementById('converted');
     }
@@ -12,7 +12,8 @@ suite('Comma Separated Values', function() {
   
   test('click button is calling calculate()', function() {
   	original.value = "25";
-  	$("button").trigger("click");
+  	//$("button").trigger("click");
+	calculate();
   	assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>25</td>              </tr>\n</tbody></table>');
   });
   
