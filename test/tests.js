@@ -13,7 +13,7 @@ suite('Comma Separated Values', function() {
   test('click button is calling calculate()', function() {
   	original.value = "25";
   	$("button").trigger("click");
-  	assert.deepEqual(finaltable.innerHTML, '\n      <p>\n          </p><table class="center" id="result">\n               \n                   <tbody><tr class="legal">\n                       \n                       <td>25</td>\n                       \n                   </tr>\n               \n          </tbody></table>\n      <p></p>\n      ');
+  	assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>25</td>              </tr>\n</tbody></table>');
   });
   
   test('alert is getting showed on error', function() {
@@ -38,18 +38,18 @@ suite('Comma Separated Values', function() {
   test('calculate function working on 1 value', function() {
     original.value = "32F";
     calculate();
-    assert.deepEqual(finaltable.innerHTML, '\n      <p>\n          </p><table class="center" id="result">\n               \n                   <tbody><tr class="legal">\n                       \n                       <td>32F</td>\n                       \n                   </tr>\n               \n          </tbody></table>\n      <p></p>\n      ');
+    assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32F</td>              </tr>\n</tbody></table>');
   });
   
   test('caculate function working on 3 values', function() {
     original.value = "32, 25, DD";
     calculate();
-    assert.deepEqual(finaltable.innerHTML, '\n      <p>\n          </p><table class="center" id="result">\n               \n                   <tbody><tr class="legal">\n                       \n                       <td>32</td>\n                       \n                       <td> 25</td>\n                       \n                       <td> DD</td>\n                       \n                   </tr>\n               \n          </tbody></table>\n      <p></p>\n      ');
+    assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32</td>                                  <td> 25</td>                                  <td> DD</td>              </tr>\n</tbody></table>');
   });
   
   test('caculate function working on values in different lines', function() {
     original.value = "32\n25, DD";
     calculate();
-    assert.deepEqual(finaltable.innerHTML, '\n      <p>\n          </p><table class="center" id="result">\n               \n                   <tbody><tr class="legal">\n                       \n                       <td>32</td>\n                       \n                   </tr>\n               \n                   <tr class="error">\n                       \n                       <td>25</td>\n                       \n                       <td> DD</td>\n                       \n                   </tr>\n               \n          </tbody></table>\n      <p></p>\n      ');
+    assert.deepEqual(finaltable.innerHTML, '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>32</td>              </tr>\n<tr class="error">                    <td>25</td>                                  <td> DD</td>              </tr>\n</tbody></table>');
   });
 });

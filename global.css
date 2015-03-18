@@ -5,7 +5,7 @@ html *
    font-family: Arial;
 }
 
-div 					{ text-align: ceoutset; border-color: red;nter;	}
+div 					{ text-align: center;	}
 h1            { text-align: center; font-size: x-large; text-shadow: 10px 10px 5px #888888;}
 th, td        { vertical-align: top; text-align: right; }  
 
@@ -108,14 +108,14 @@ th, td        { vertical-align: top; text-align: right; }
 
 /* #finaltable table { border-collapse:collapse; } */
 /* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover tr:hover { background-color: green; } 
+#finaltable:hover td { background-color: blue; } 
 tr:nth-child(odd)    { background-color:#eee; }
-tr:nth-child(even)    { background-color:#ffaa56; }
+tr:nth-child(even)    { background-color:#00FF66; }
 input        { text-align: right;  border: none;       }     /* Align input to the right  */
 textarea     { border: outset; border-color: white;       }                        
 table        { border: inset; border-color: white; }
 table.center { margin-left:auto; margin-right:auto; }
-#result      { border: outset; border-color: transparent; }
+#result      { border-color: red; }
 tr.error       { background-color: red; }
 body
 {
