@@ -14,11 +14,9 @@ function calculate() {
   var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
   var lines = temp.split(/\n+\s*/);
   var commonLength = NaN;
+  var tableTemplate = document.getElementById("tableTemplate").innerHTML;
   var r = [];
-  // Template using underscore
-  var row = "<% _.each(items, function(name) { %>"     +
-            "                    <td><%= name %></td>" +
-            "              <% }); %>";
+  var row;
 
   if (window.localStorage) localStorage.original  = temp;
   
@@ -44,18 +42,19 @@ function calculate() {
         var removeescapedquotes = removelastquote.replace(/\\"/,'"');
         result.push(removeescapedquotes);
       }
-      var tr = error? '<tr class="error">' : '<tr>';
-      r.push(tr+_.template(row, {items : result})+"</tr>");
+      var tr = error ? 'error' : 'legal';
+      row = new Object();
+      row.type = tr;
+      row.items = result;
+      r.push(row);
     }
     else{
       alert('ERROR! row '+temp+' does not look as legal CSV');
       error = true;
     }
   }
-  r.unshift('<p>\n<table class="center" id="result">');
-  r.push('</table>');
   //alert(r.join('\n')); // debug
-  finaltable.innerHTML = r.join('\n');
+  finaltable.innerHTML = _.template(tableTemplate, { r: r });
 }
 
 window.onload = function() {
