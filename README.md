@@ -1,6 +1,6 @@
-#Práctica 2
+#Práctica 2.2
 
-##  Comma separated values
+##  Comma separated values +  ajax
 
 > Autor: Alexis López, Marcos Luis
 
